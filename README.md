@@ -1,4 +1,4 @@
-# Remove Latex command with curly brackets
+# Remove specific Latex commands with curly brackets
 
 ## Motivation
 When one Latex file is
