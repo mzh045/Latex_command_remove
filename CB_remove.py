@@ -4,11 +4,11 @@ import glob, os
 import argparse
 import pdb
 
-def command_remove(tex_in, keywords):
+def command_remove(tex_in, keywords):#'tex_in' is the tex file that you want to purify
     # Romove command with curly bracket
     # keywords: "hl textbf" mean removing \hl{} and \textbf{}
     pattern = '\\\\(' + keywords.replace(' ', '|') + '){'
-    commands = re.finditer(pattern, tex_in)
+    commands = re.finditer(pattern, tex_in)#re.finditer will return the match result using the iteration type
     idxs_to_del = [] # The index of }
     for command in commands:
         stack = 0
